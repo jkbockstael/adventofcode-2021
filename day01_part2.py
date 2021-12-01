@@ -2,7 +2,6 @@
 # https://adventofcode.com/2021/day/1
 
 import sys
-import functools
 from day01_part1 import parse_input, part1
 
 def part2(depths):

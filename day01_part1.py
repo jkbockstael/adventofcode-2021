@@ -2,7 +2,6 @@
 # https://adventofcode.com/2021/day/1
 
 import sys
-import functools
 
 def parse_input(lines):
     return [int(line.strip()) for line in lines]
