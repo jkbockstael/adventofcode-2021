@@ -6,12 +6,11 @@ import sys
 def parse_input(lines):
     return [int(line.strip()) for line in lines]
 
+def total_increases(depths, window_size=1):
+    return sum(a < b for a,b in zip(depths, depths[window_size:]))
+
 def part1(depths):
-    total = 0
-    for i in range(1,len(depths)):
-        if depths[i] > depths[i-1]:
-            total += 1
-    return total
+    return total_increases(depths)
 
 if __name__ == "__main__":
     print(part1(parse_input(sys.stdin.readlines())))
